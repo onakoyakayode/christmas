@@ -1,4 +1,4 @@
-let button = document.getElementById("button").innerHTML = "My Message";
+let button = document.getElementById("button").innerHTML = "Message";
 
 function clickMe() {
     let fullName = prompt("Kindly, Tell me your name");
