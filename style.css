@@ -1,0 +1,695 @@
+@import url('https://fonts.googleapis.com/css2?family=Pushster&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin-block-end: 10vh;
+}
+
+.profile-picture {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.message {
+    color: #1c3e;
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-style: oblique;
+    line-height: 1.4;
+    text-transform: capitalize;
+    text-decoration: underline double #1c3e;
+    box-shadow: 0 0 5px #ff0707, 0 0 25px #ff0707, 0 0 75px #ff0707, 0 0 200px #ff0707;
+    animation: move;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move {
+    0% {
+        box-shadow: 0 0 5px #ff0707, 0 0 25px #ff0707, 0 0 50px #ff0707, 0 0 200px #ff0707;
+    }   
+    
+    50% {
+        box-shadow: 0 0 5px #ff0, 0 0 25px #ff0, 0 0 75px #ff0, 0 0 200px #ff0;
+    }
+
+    100% {
+        box-shadow: 0 0 5px #0707, 0 0 25px #0707, 0 0 100px #0707, 0 0 200px #0707;
+    }
+}
+
+.main-message {
+    margin: 10vh;
+}
+
+#wish {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: transparent;
+    color: rgb(212, 26, 26);
+    font-family: 'Pushster', cursive;
+    padding: 1rem;
+    margin: auto;
+    width: 60%;
+    height: 70px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+    margin-block-end: 8vh;
+    text-shadow: 1px 1px 2px rgba(255, 102, 0, 0.26);
+}
+
+.button {
+    display: grid;
+    place-content: center;
+}
+
+button {
+    position: relative;
+    border: none;
+    z-index: 1;
+    transition: .8s ease-in;
+}
+
+button::before,
+button::after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+}
+
+#button {
+    padding: .7rem 3rem;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    background-color: black;
+    color: #7ea172;
+    border: 2px solid #7ea172;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#button:hover,
+#button:active {
+    transform: scale(1.05);
+    font-style: oblique;
+    color: #2e6171;
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: inset -10.5em 0 0 0 transparent, inset 10.5em 0 0 0 transparent;
+    
+}
+
+#button::after {
+    height: 0;
+    left: 0;
+    top: 0;
+    transition-duration: 1s;
+    width: 100%;
+}
+
+#button:hover::after {
+    height: 100%;
+    box-shadow: 0 0 5px #2e6171, 0 0 25px #2e6171, 0 0 75px #2e6171, 0 0 200px #2e6171;
+}
+
+
+
+@media (max-width: 576px) {
+    body {
+        background-color: #000;
+    }
+    
+    .header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    
+    .profile {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 2rem;
+        margin-block-end: 8vh;
+    }
+    
+    .profile-picture {
+        width: 100px;
+        border-radius: 50%;
+    }
+    
+    .message {
+        color: #1c3e;
+        font-size: 1.3rem;
+        font-weight: bold;
+        font-style: oblique;
+        line-height: 1.4;
+        text-transform: capitalize;
+        text-decoration: underline double #1c3e;
+        box-shadow: 0 0 5px #ff0707, 0 0 25px #ff0707, 0 0 75px #ff0707, 0 0 200px #ff0707;
+        animation: move;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes move {
+        0% {
+            box-shadow: 0 0 5px #ff0707, 0 0 25px #ff0707, 0 0 50px #ff0707, 0 0 200px #ff0707;
+        }   
+        
+        50% {
+            box-shadow: 0 0 5px #ff0, 0 0 25px #ff0, 0 0 75px #ff0, 0 0 200px #ff0;
+        }
+    
+        100% {
+            box-shadow: 0 0 5px #0707, 0 0 25px #0707, 0 0 100px #0707, 0 0 200px #0707;
+        }
+    }
+    
+    .main-message {
+        margin: 14vh 2rem;
+    }
+    
+    #wish {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: rgb(212, 26, 26);
+        font-family: 'Pushster', cursive;
+        padding: 1rem;
+        margin: 0;
+        width: 100%;
+        height: 70px;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        letter-spacing: 2px;
+        word-spacing: 5px;
+        margin-block-end: 7vh;
+        text-shadow: 1px 1px 2px rgba(255, 102, 0, 0.568);
+    }
+    
+    .button {
+        display: grid;
+        place-content: center;
+    }
+    
+    button {
+        position: relative;
+        border: none;
+        z-index: 1;
+        transition: .8s ease-in;
+    }
+    
+    button::before,
+    button::after {
+        position: absolute;
+        content: "";
+        z-index: -1;
+    }
+    
+    #button {
+        padding: .7rem 3rem;
+        font-size: 1.3rem;
+        line-height: 1.3;
+        background-color: black;
+        color: #7ea172;
+        border: 2px solid #7ea172;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    #button:hover,
+    #button:active {
+        transform: scale(1.05);
+        font-style: oblique;
+        font-weight: 600;
+        color: #2e6171;
+        background-color: transparent;
+        border-radius: 5px;
+        box-shadow: inset -10.5em 0 0 0 transparent, inset 10.5em 0 0 0 transparent;
+        
+    }
+    
+    #button::after {
+        height: 0;
+        left: 0;
+        top: 0;
+        transition-duration: 1s;
+        width: 100%;
+    }
+    
+    #button:hover::after {
+        height: 100%;
+        box-shadow: 0 0 5px #2e6171, 0 0 25px #2e6171, 0 0 75px #2e6171, 0 0 200px #2e6171;
+    }
+}
+
+
+@media (min-width: 576.2px) and (max-width: 869px) {
+    body {
+        background-color: #000;
+    }
+    
+    .header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    
+    .profile {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem 2rem;
+        margin-block-end: 8vh;
+    }
+    
+    .profile-picture {
+        width: 150px;
+        border-radius: 50%;
+    }
+    
+    .message {
+        color: #1c3e;
+        font-size: 1.6rem;
+        font-weight: bold;
+        font-style: oblique;
+        line-height: 1.4;
+        text-transform: capitalize;
+        text-decoration: underline double #1c3e;
+        box-shadow: 0 0 5px #ff0707, 0 0 25px #ff0707, 0 0 75px #ff0707, 0 0 200px #ff0707;
+        animation: move;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes move {
+        0% {
+            box-shadow: 0 0 5px #ff0707, 0 0 25px #ff0707, 0 0 50px #ff0707, 0 0 200px #ff0707;
+        }   
+        
+        50% {
+            box-shadow: 0 0 5px #ff0, 0 0 25px #ff0, 0 0 75px #ff0, 0 0 200px #ff0;
+        }
+    
+        100% {
+            box-shadow: 0 0 5px #0707, 0 0 25px #0707, 0 0 100px #0707, 0 0 200px #0707;
+        }
+    }
+    
+    .main-message {
+        margin: 14vh 2rem;
+    }
+    
+    #wish {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: rgb(212, 26, 26);
+        font-family: 'Pushster', cursive;
+        padding: 1rem;
+        margin: 0;
+        width: 100%;
+        height: 70px;
+        font-size: 1.7rem;
+        line-height: 1.5;
+        letter-spacing: 2px;
+        word-spacing: 5px;
+        margin-block-end: 7vh;
+        text-shadow: 1px 1px 2px rgba(255, 102, 0, 0.568);
+    }
+    
+    .button {
+        display: grid;
+        place-content: center;
+    }
+    
+    button {
+        position: relative;
+        border: none;
+        z-index: 1;
+        transition: .8s ease-in;
+    }
+    
+    button::before,
+    button::after {
+        position: absolute;
+        content: "";
+        z-index: -1;
+    }
+    
+    #button {
+        padding: .8rem 3.2rem;
+        font-size: 1.4rem;
+        line-height: 1.4;
+        background-color: black;
+        color: #7ea172;
+        border: 2px solid #7ea172;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    #button:hover,
+    #button:active {
+        transform: scale(1.05);
+        font-style: oblique;
+        font-weight: 600;
+        color: #2e6171;
+        background-color: transparent;
+        border-radius: 5px;
+        box-shadow: inset -10.5em 0 0 0 transparent, inset 10.5em 0 0 0 transparent;
+        
+    }
+    
+    #button::after {
+        height: 0;
+        left: 0;
+        top: 0;
+        transition-duration: 1s;
+        width: 100%;
+    }
+    
+    #button:hover::after {
+        height: 100%;
+        box-shadow: 0 0 5px #2e6171, 0 0 25px #2e6171, 0 0 75px #2e6171, 0 0 200px #2e6171;
+    }
+}
+
+
+@media (min-width: 869.2px) and (max-width:1024px) {
+    body {
+        background-color: #000;
+    }
+    
+    .header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    
+    .profile {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem 2rem;
+        margin-block-end: 8vh;
+    }
+    
+    .profile-picture {
+        width: 150px;
+        border-radius: 50%;
+    }
+    
+    .message {
+        color: #1c3e;
+        font-size: 1.6rem;
+        font-weight: bold;
+        font-style: oblique;
+        line-height: 1.4;
+        text-transform: capitalize;
+        text-decoration: underline double #1c3e;
+        box-shadow: 0 0 5px #ff0707, 0 0 25px #ff0707, 0 0 75px #ff0707, 0 0 200px #ff0707;
+        animation: move;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes move {
+        0% {
+            box-shadow: 0 0 5px #ff0707, 0 0 25px #ff0707, 0 0 50px #ff0707, 0 0 200px #ff0707;
+        }   
+        
+        50% {
+            box-shadow: 0 0 5px #ff0, 0 0 25px #ff0, 0 0 75px #ff0, 0 0 200px #ff0;
+        }
+    
+        100% {
+            box-shadow: 0 0 5px #0707, 0 0 25px #0707, 0 0 100px #0707, 0 0 200px #0707;
+        }
+    }
+    
+    .main-message {
+        margin: 14vh 2rem;
+    }
+    
+    #wish {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: rgb(212, 26, 26);
+        font-family: 'Pushster', cursive;
+        padding: 1rem;
+        margin: 0;
+        width: 100%;
+        height: 70px;
+        font-size: 1.7rem;
+        line-height: 1.5;
+        letter-spacing: 2px;
+        word-spacing: 5px;
+        margin-block-end: 7vh;
+        text-shadow: 1px 1px 2px rgba(255, 102, 0, 0.568);
+    }
+    
+    .button {
+        display: grid;
+        place-content: center;
+    }
+    
+    button {
+        position: relative;
+        border: none;
+        z-index: 1;
+        transition: .8s ease-in;
+    }
+    
+    button::before,
+    button::after {
+        position: absolute;
+        content: "";
+        z-index: -1;
+    }
+    
+    #button {
+        padding: .8rem 3.2rem;
+        font-size: 1.4rem;
+        line-height: 1.4;
+        background-color: black;
+        color: #7ea172;
+        border: 2px solid #7ea172;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    #button:hover,
+    #button:active {
+        transform: scale(1.05);
+        font-style: oblique;
+        font-weight: 600;
+        color: #2e6171;
+        background-color: transparent;
+        border-radius: 5px;
+        box-shadow: inset -10.5em 0 0 0 transparent, inset 10.5em 0 0 0 transparent;
+        
+    }
+    
+    #button::after {
+        height: 0;
+        left: 0;
+        top: 0;
+        transition-duration: 1s;
+        width: 100%;
+    }
+    
+    #button:hover::after {
+        height: 100%;
+        box-shadow: 0 0 5px #2e6171, 0 0 25px #2e6171, 0 0 75px #2e6171, 0 0 200px #2e6171;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        background-color: #000;
+    }
+    
+    .header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
+    
+    .profile {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 2rem;
+        margin-block-end: 8vh;
+    }
+    
+    .profile-picture {
+        width: 150px;
+        border-radius: 50%;
+    }
+    
+    .message {
+        color: #1c3e;
+        font-size: 1.6rem;
+        font-weight: 500;
+        font-style: oblique;
+        line-height: 1.4;
+        text-transform: capitalize;
+        text-decoration: underline double #1c3e;
+        box-shadow: 0 0 5px #ff0707, 0 0 25px #ff0707, 0 0 75px #ff0707, 0 0 200px #ff0707;
+        animation: move;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes move {
+        0% {
+            box-shadow: 0 0 5px #ff0707, 0 0 25px #ff0707, 0 0 50px #ff0707, 0 0 200px #ff0707;
+        }   
+        
+        50% {
+            box-shadow: 0 0 5px #ff0, 0 0 25px #ff0, 0 0 75px #ff0, 0 0 200px #ff0;
+        }
+    
+        100% {
+            box-shadow: 0 0 5px #0707, 0 0 25px #0707, 0 0 100px #0707, 0 0 200px #0707;
+        }
+    }
+    
+    .main-message {
+        margin: 9vh;
+    }
+    
+    #wish {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: transparent;
+        color: rgb(212, 26, 26);
+        font-family: 'Pushster', cursive;
+        padding: 1rem;
+        margin: auto;
+        width: 60%;
+        height: 70px;
+        font-size: 1.8rem;
+        line-height: 1.5;
+        letter-spacing: 2px;
+        word-spacing: 10px;
+        margin-block-end: 8vh;
+        text-shadow: 1px 1px 2px rgba(255, 208, 0, 0.719), rgba(255, 102, 0, 0.26);
+    }
+    
+    .button {
+        display: grid;
+        place-content: center;
+    }
+    
+    button {
+        position: relative;
+        border: none;
+        z-index: 1;
+        transition: .8s ease-in;
+    }
+    
+    button::before,
+    button::after {
+        position: absolute;
+        content: "";
+        z-index: -1;
+    }
+    
+    #button {
+        padding: .8rem 3rem;
+        font-size: 1.3rem;
+        line-height: 1.3;
+        background-color: black;
+        color: #7ea172;
+        border: 2px solid #7ea172;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    #button:hover,
+    #button:active {
+        transform: scale(1.05);
+        font-style: oblique;
+        color: #2e6171;
+        background-color: transparent;
+        border-radius: 5px;
+        box-shadow: inset -10.5em 0 0 0 transparent, inset 10.5em 0 0 0 transparent;
+        
+    }
+    
+    #button::after {
+        height: 0;
+        left: 0;
+        top: 0;
+        transition-duration: 1s;
+        width: 100%;
+    }
+    
+    #button:hover::after {
+        height: 100%;
+        box-shadow: 0 0 5px #2e6171, 0 0 25px #2e6171, 0 0 75px #2e6171, 0 0 200px #2e6171;
+    }
+}
