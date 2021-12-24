@@ -170,6 +170,7 @@ button::after {
     .profile-picture {
         width: 100px;
         border-radius: 50%;
+        margin-block-end: 3vh;
     }
     
     .message {
